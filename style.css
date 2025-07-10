@@ -337,7 +337,7 @@ main {
 }
 
 main.wrapper > * + * {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .hero-banner {
@@ -632,14 +632,14 @@ main.wrapper > * + * {
 /* --- Seção de Título Genérica --- */
 .section-title {
     text-align: left; /* <-- ALTERAÇÃO AQUI */
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
     color: var(--cor-texto);
 }
 
 /* --- Seção de Ambientes (Home) --- */
 .ambiente-section {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .ambiente-banner {
@@ -760,7 +760,7 @@ main.wrapper > * + * {
 
 /* Carrossel de Produtos e Mais Vendidos (Específico) */
 .product-carousel-section .section-title {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .product-carousel-section .carousel-track .product-card {
