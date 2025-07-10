@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suvinil - Rezende Materiais para Construção</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="wrapper">
+            <div class="header-top-bar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo-rezende.jpg" alt="Logo Rezende Materiais para Construção">
+                    </a>
+                </div>
+                <div class="search-bar desktop-search">
+                    <input type="text" placeholder="O que procura?">
+                    <button><i class="fa-solid fa-search"></i></button>
+                </div>
+                <div class="user-actions desktop-actions">
+                    <a href="#" class="action-item"><i class="fa-solid fa-user"></i> <span>Entrar / Cadastrar</span></a>
+                    <a href="#" class="action-item"><i class="fa-solid fa-shopping-cart"></i> <span>Carrinho</span></a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="wrapper nav-wrapper">
+                <div class="departments-menu">
+                    <button class="departments-button"><i class="fa-solid fa-bars"></i> <span class="departments-text">Departamentos</span></button>
+                    <div class="departments-dropdown-content" id="departmentsDropdown">
+                        <button class="close-departments-button" id="closeDepartmentsBtn"><i class="fa-solid fa-times"></i></button>
+                        <div class="has-submenu">
+                            <a href="#">Ofertas <i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Ofertas do Dia</a></li>
+                                <li><a href="#">Promoções</a></li>
+                                <li><a href="#">Mais vendidos</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Iluminação<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Embutidos</a></li>
+                                <li><a href="#">Pendentes</a></li>
+                                <li><a href="#">Lineares</a></li>
+                                <li><a href="#">Fitas</a></li>
+                                <li><a href="#">Lampadas</a></li>
+                                <li><a href="#">Fontes</a></li>
+                                <li><a href="#">Jardim</a></li>
+                                <li><a href="#">Sistemas</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Eletrica<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Fios e Cabos</a></li>
+                                <li><a href="#">Tomadas e Interruptores</a></li>
+                                <li><a href="#">Disjuntores</a></li>
+                                <li><a href="#">Quadros</a></li>
+                                <li><a href="#">Caixas de Passagem</a></li>
+                                <li><a href="#">Tubos e Eletrodutos</a></li>
+                                <li><a href="#">Acessorios e Adaptadores</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Argamassa<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Areia</a></li>
+                                <li><a href="#">Armagassas</a></li>
+                                <li><a href="#">Cimentos</a></li>
+                                <li><a href="#">Aditivos</a></li>
+                                <li><a href="#">Rejuntes</a></li>
+                                <li><a href="#">Impermeabilizantes</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Louças<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Bacias Sanitários</a></li>
+                                <li><a href="#">Cubas</a></li>
+                                <li><a href="#">Assentos</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Metais<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Duchas</a></li>
+                                <li><a href="#">Misturadores Gourmet</a></li>
+                                <li><a href="#">Torneiras</a></li>
+                                <li><a href="#">Acabamentos</a></li>
+                                <li><a href="#">Registros e Válvulas</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Hidráulica<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Tubos e Conexões</a></li>
+                                <li><a href="#">Chuveiros</a></li>
+                                <li><a href="#">Registros e Válvulas</a></li>
+                                <li><a href="#">Bombas e Caixas D'água</a></li>
+                                <li><a href="#">Acabamentos</a></li>
+                            </ul>
+                        </div>
+                         <div class="has-submenu">
+                            <a href="#">Colas e Fitas<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Colas</a></li>
+                                <li><a href="#">Silicones e Selantes</a></li>
+                                <li><a href="#">Fitas Adesivas</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Aquecedores<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Aquecedores a Gás</a></li>
+                                <li><a href="#">Aquecedores Elétricos</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="suvinil-produtos.html">Tintas<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="suvinil-produtos.html#acrilica">Tintas Suvinil Select</a></li>
+                                <li><a href="suvinil-produtos.html#latex">Linha Premium</a></li>
+                                <li><a href="suvinil-produtos.html#cores">Madeiras e Metais</a></li>
+                                <li><a href="suvinil-produtos.html#preparacao">Tintas de Parede</a></li>
+                                <li><a href="suvinil-produtos.html#preparacao">Acessorios</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Pisos e Revestimentos<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Porcelanatos</a></li>
+                                <li><a href="#">Ceramicas</a></li>
+                                <li><a href="#">Pisos Vinilicos</a></li>
+                                <li><a href="#">Laminados</a></li>
+                                <li><a href="#">Externos</a></li>
+                                <li><a href="#">Acessorios</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Ambientes<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Banheiro</a></li>
+                                <li><a href="#">Cozinha</a></li>
+                                <li><a href="#">Externo</a></li>
+                                <li><a href="#">Quarto</a></li>
+                                <li><a href="#">Sala</a></li>
+                                <li><a href="#">Gourmet</a></li>
+                                <li><a href="#">Area de serviço</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-bar mobile-nav-search">
+                    <input type="text" placeholder="O que procura?">
+                    <button><i class="fa-solid fa-search"></i></button>
+                </div>
+
+                <ul class="benefits-list">
+                    <li><i class="fa-solid fa-percent"></i><span>Ofertas</span></li>
+                    <li><i class="fa-solid fa-lightbulb"></i><span>Iluminação</span></li>
+                    <li><i class="fa-solid fa-bolt"></i><span>Elétrica</span></li>
+                    <li><i class="fa-solid fa-trowel-bricks"></i><span>Argamassa</span></li>
+                    <li><i class="fa-solid fa-toilet"></i><span>Louças</span></li>
+                    <li><i class="fa-solid fa-ring"></i><span>Metais</span></li>
+                    <li><i class="fa-solid fa-faucet"></i><span>Hidráulica</span></li>
+                    <li><i class="fa-solid fa-tape"></i><span>Adesivos</span></li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i><span>Aquecedores</span></li>
+                    <li><a href="suvinil-produtos.html"><i class="fa-solid fa-paint-roller"></i><span>Tintas</span></a></li>
+                    <li><i class="fa-solid fa-clone"></i><span>Pisos e Revestimentos</span></li>
+                    <li><i class="fa-solid fa-house"></i><span>Ambientes</span></li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <main>
+        <div class="main-content-area wrapper">
+            
+            <aside class="sidebar-filters" id="sidebarFilters">
+                <button class="close-filters-button" id="closeFiltersBtn"><i class="fa-solid fa-times"></i></button>
+                <h2>Filtros</h2>
+                <div class="sidebar-filters-content-scroll"> 
+                    <div class="filter-group">
+                        <h3>Tipo de Tinta <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <label><input type="checkbox" name="tipo_tinta" value="acrilica"> Acrílica</label>
+                            <label><input type="checkbox" name="tipo_tinta" value="latex"> Látex</label>
+                            <label><input type="checkbox" name="esmalte"> Esmalte</label>
+                            <label><input type="checkbox" name="verniz"> Verniz</label>
+                            <label><input type="checkbox" name="manta"> Manta Líquida</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Acabamento <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <label><input type="checkbox" name="acabamento" value="fosco"> Fosco</label>
+                            <label><input type="checkbox" name="acabamento" value="acetinado"> Acetinado</label>
+                            <label><input type="checkbox" name="acabamento" value="brilhante"> Brilhante</label>
+                            <label><input type="checkbox" name="acabamento" value="emborrachado"> Emborrachado</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Uso <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <label><input type="checkbox" name="uso" value="interno"> Interno</label>
+                            <label><input type="checkbox" name="uso" value="externo"> Externo</label>
+                            <label><input type="checkbox" name="uso" value="madeira"> Madeira</label>
+                            <label><input type="checkbox" name="uso" value="metal"> Metal</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Preço <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <input type="range" min="0" max="500" value="500" class="slider" id="priceRange">
+                            <p>Até R$ <span id="priceValue">500</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="apply-filters">Aplicar Filtros</button>
+            </aside>
+
+            <section class="products-container">
+                <div class="page-title">
+                    <h1>Produtos Suvinil</h1>
+                    <p>A Suvinil e Rezende uma parceria que vem há 30 anos realizando sonhos.</p>
+                </div>
+
+                <button class="open-filters-button" id="openFiltersBtn"><i class="fa-solid fa-filter"></i> Filtros</button>
+
+                <div class="product-grid">
+                    <div class="product-card common-card-styles" id="fosco-completo">
+                        <img src="https://img.irroba.com.br/filters:fill(fff):quality(80)/fitztint/catalog/1714n.jpg" alt="Tinta Suvinil Fosco Completo">
+                        <h3>Suvinil Fosco Completo</h3>
+                        <p>Tinta acrílica de acabamento fosco, alta cobertura e fácil aplicação, para paredes internas e externas.</p>
+                        <span class="price">R$ 299,90</span>
+                        <div class="product-buttons">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="buy-now">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product-card common-card-styles" id="sempre-limpo">
+                        <img src="https://politintas.vtexassets.com/arquivos/ids/170125/tinta-acrilica-inova-fosco-sempe-limpo-18l-suvinil.png?v=638718651140400000" alt="Tinta Suvinil Sempre Limpa">
+                        <h3>Suvinil Sempre Limpa</h3>
+                        <p>Tinta acrílica com tecnologia que facilita a limpeza, ideal para ambientes de grande circulação.</p>
+                        <span class="price">R$ 349,90</span>
+                        <div class="product-buttons">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="buy-now">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product-card common-card-styles" id="fosco-select">
+                        <img src="https://cdn.leroymerlin.com.br/products/tinta_suvinil_toque_fosco_select_18litros_gelo_1572216695_5db2_600x600.jpg" alt="Tinta Suvinil Fosco Select">
+                        <h3>Suvinil Fosco Select</h3>
+                        <p>Acabamento fosco aveludado, toque suave e alta resistência, para um ambiente sofisticado.</p>
+                        <span class="price">R$ 389,90</span>
+                        <div class="product-buttons">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="buy-now">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product-card common-card-styles" id="esmalt-cor-protecao">
+                        <img src="https://todimo.vtexassets.com/arquivos/ids/208258-800-800?v=638597579289270000&width=800&height=800&aspect=true" alt="Esmalte Suvinil Cor & Proteção">
+                        <h3>Suvinil Esmalte Cor & Proteção</h3>
+                        <p>Esmalte base água para madeira e metal, secagem rápida, sem cheiro e alta durabilidade.</p>
+                        <span class="price">R$ 129,90</span>
+                        <div class="product-buttons">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="buy-now">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product-card common-card-styles" id="suviflex">
+                        <img src="https://panoramahomecenter.vtexassets.com/arquivos/ids/5683198/Suviflex_36_lt_suvinil_ref50687488_1917530.jpg?v=638811013794800000" alt="Suvinil Suviflex">
+                        <h3>Suvinil Suviflex</h3>
+                        <p>Manta líquida elástica que impermeabiliza e protege paredes externas contra batida de chuva.</p>
+                        <span class="price">R$ 450,00</span>
+                        <div class="product-buttons">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="buy-now">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product-card common-card-styles" id="fachada-emborrachada">
+                        <img src="https://politintas.vtexassets.com/arquivos/ids/170351/Tinta-Emborrachada-Fachada-Protegida-16-Litros-Suvinil.jpg?v=638621044287930000" alt="Tinta Suvinil Fachada Protegida Emborrachada">
+                        <h3>Suvinil Fachada Protegida Emborrachada</h3>
+                        <p>Tinta com alta elasticidade, cobre fissuras e resiste a intempéries, ideal para fachadas.</p>
+                        <span class="price">R$ 499,90</span>
+                        <div class="product-buttons">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="buy-now">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="filters-overlay" id="filtersOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

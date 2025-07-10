@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezende Materiais para Construção</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="wrapper">
+            <div class="header-top-bar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo-rezende.jpg" alt="Logo Rezende Materiais para Construção">
+                    </a>
+                </div>
+                <div class="search-bar desktop-search">
+                    <input type="text" placeholder="O que procura?">
+                    <button><i class="fa-solid fa-search"></i></button>
+                </div>
+                <div class="user-actions desktop-actions">
+                    <a href="#" class="action-item"><i class="fa-solid fa-user"></i> <span>Entrar / Cadastrar</span></a>
+                    <a href="#" class="action-item"><i class="fa-solid fa-shopping-cart"></i> <span>Carrinho</span></a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="wrapper nav-wrapper">
+                <div class="departments-menu">
+                    <button class="departments-button"><i class="fa-solid fa-bars"></i> <span class="departments-text">Departamentos</span></button>
+                    <div class="departments-dropdown-content" id="departmentsDropdown">
+                        <button class="close-departments-button" id="closeDepartmentsBtn"><i class="fa-solid fa-times"></i></button>
+                        <div class="has-submenu">
+                            <a href="#">Ofertas <i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Ofertas do Dia</a></li>
+                                <li><a href="#">Promoções</a></li>
+                                <li><a href="#">Mais vendidos</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Iluminação<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Embutidos</a></li>
+                                <li><a href="#">Pendentes</a></li>
+                                <li><a href="#">Lineares</a></li>
+                                <li><a href="#">Fitas</a></li>
+                                <li><a href="#">Lampadas</a></li>
+                                <li><a href="#">Fontes</a></li>
+                                <li><a href="#">Jardim</a></li>
+                                <li><a href="#">Sistemas</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Eletrica<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Fios e Cabos</a></li>
+                                <li><a href="#">Tomadas e Interruptores</a></li>
+                                <li><a href="#">Disjuntores</a></li>
+                                <li><a href="#">Quadros</a></li>
+                                <li><a href="#">Caixas de Passagem</a></li>
+                                <li><a href="#">Tubos e Eletrodutos</a></li>
+                                <li><a href="#">Acessorios e Adaptadores</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Argamassa<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Areia</a></li>
+                                <li><a href="#">Armagassas</a></li>
+                                <li><a href="#">Cimentos</a></li>
+                                <li><a href="#">Aditivos</a></li>
+                                <li><a href="#">Rejuntes</a></li>
+                                <li><a href="#">Impermeabilizantes</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Louças<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Bacias Sanitários</a></li>
+                                <li><a href="#">Cubas</a></li>
+                                <li><a href="#">Assentos</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Metais<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Duchas</a></li>
+                                <li><a href="#">Misturadores Gourmet</a></li>
+                                <li><a href="#">Torneiras</a></li>
+                                <li><a href="#">Acabamentos</a></li>
+                                <li><a href="#">Registros e Válvulas</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Hidráulica<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Tubos e Conexões</a></li>
+                                <li><a href="#">Chuveiros</a></li>
+                                <li><a href="#">Registros e Válvulas</a></li>
+                                <li><a href="#">Bombas e Caixas D'água</a></li>
+                                <li><a href="#">Acabamentos</a></li>
+                            </ul>
+                        </div>
+                         <div class="has-submenu">
+                            <a href="#">Colas e Fitas<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Colas</a></li>
+                                <li><a href="#">Silicones e Selantes</a></li>
+                                <li><a href="#">Fitas Adesivas</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Aquecedores<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Aquecedores a Gás</a></li>
+                                <li><a href="#">Aquecedores Elétricos</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="suvinil-produtos.html">Tintas<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="suvinil-produtos.html#acrilica">Tintas Suvinil Select</a></li>
+                                <li><a href="suvinil-produtos.html#latex">Linha Premium</a></li>
+                                <li><a href="suvinil-produtos.html#cores">Madeiras e Metais</a></li>
+                                <li><a href="suvinil-produtos.html#preparacao">Tintas de Parede</a></li>
+                                <li><a href="suvinil-produtos.html#preparacao">Acessorios</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Pisos e Revestimentos<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Porcelanatos</a></li>
+                                <li><a href="#">Ceramicas</a></li>
+                                <li><a href="#">Pisos Vinilicos</a></li>
+                                <li><a href="#">Laminados</a></li>
+                                <li><a href="#">Externos</a></li>
+                                <li><a href="#">Acessorios</a></li>
+                            </ul>
+                        </div>
+                        <div class="has-submenu">
+                            <a href="#">Ambientes<i class="fa-solid fa-caret-right submenu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Banheiro</a></li>
+                                <li><a href="#">Cozinha</a></li>
+                                <li><a href="#">Externo</a></li>
+                                <li><a href="#">Quarto</a></li>
+                                <li><a href="#">Sala</a></li>
+                                <li><a href="#">Gourmet</a></li>
+                                <li><a href="#">Area de serviço</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-bar mobile-nav-search">
+                    <input type="text" placeholder="O que procura?">
+                    <button><i class="fa-solid fa-search"></i></button>
+                </div>
+
+                <ul class="benefits-list">
+                    <li><i class="fa-solid fa-percent"></i><span>Ofertas</span></li>
+                    <li><i class="fa-solid fa-lightbulb"></i><span>Iluminação</span></li>
+                    <li><i class="fa-solid fa-bolt"></i><span>Elétrica</span></li>
+                    <li><i class="fa-solid fa-trowel-bricks"></i><span>Argamassa</span></li>
+                    <li><i class="fa-solid fa-toilet"></i><span>Louças</span></li>
+                    <li><i class="fa-solid fa-ring"></i><span>Metais</span></li>
+                    <li><i class="fa-solid fa-faucet"></i><span>Hidráulica</span></li>
+                    <li><i class="fa-solid fa-tape"></i><span>Adesivos</span></li>
+                    <li><i class="fa-solid fa-hot-tub-person"></i><span>Aquecedores</span></li>
+                    <li><a href="suvinil-produtos.html"><i class="fa-solid fa-paint-roller"></i><span>Tintas</span></a></li>
+                    <li><i class="fa-solid fa-clone"></i><span>Pisos e Revestimentos</span></li>
+                    <li><i class="fa-solid fa-house"></i><span>Ambientes</span></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="wrapper">
+        <section class="hero-banner">
+            <img src="banner principal.png" alt="Banner Principal Krona">
+        </section>
+
+        <section class="info-bar">
+            <div class="wrapper">
+                <div class="info-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>Entregamos para todo o Brasil</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Parcelamos em até 10x sem juros</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-tags"></i>
+                    <span>Descontos especiais no boleto ou pix</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-medal"></i>
+                    <span>Mais de 80 anos de tradição</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-categories">
+            <div class="category-card common-card-styles">
+                <img src="Acabamentos.jpg" alt="Categoria Torneiras">
+                <div class="card-info">
+                    <h3>TORNEIRAS</h3>
+                    <p>Linha Premium</p>
+                </div>
+            </div>
+            <a href="suvinil-produtos.html" class="category-card common-card-styles">
+                <img src="Suvinil Rezende.png" alt="Categoria Tintas">
+                <div class="card-info">
+                    <h3>Suvinil</h3>
+                    <p>Cores e Acabamentos</p>
+                </div>
+            </a>
+            <div class="category-card common-card-styles">
+                <img src="Experiencias magicas.png" alt="Categoria Tigre">
+                <div class="card-info">
+                    <h3>Experiencias Magicas</h3>
+                    <p>Venha conhecer o nosso projeto</p>
+                </div>
+            </div>
+            <div class="category-card common-card-styles">
+                <img src="https://www.queveks.com.br/upload/ckeditor/images/Ambiente_todo_decorado.png" alt="Categoria Novidades">
+                <div class="card-info">
+                    <h3>NOVIDADES</h3>
+                    <p>Últimos Lançamentos</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="filters-overlay" id="filtersOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
