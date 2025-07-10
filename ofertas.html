@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezende Materiais para Construção</title>
+    <title>Ofertas - Rezende Materiais para Construção</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -39,7 +39,7 @@
                             <ul class="submenu">
                                 <li><a href="ofertas.html">Ofertas do Dia</a></li>
                                 <li><a href="ofertas.html">Promoções</a></li>
-                                <li><a href="mais-vendidos.html">Mais vendidos</a></li>
+                                <li><a href="ofertas.html">Mais vendidos</a></li>
                             </ul>
                         </div>
                         <div class="has-submenu">
@@ -163,53 +163,59 @@
                 </div>
 
                 <ul class="benefits-list">
-                    <li><a href="ofertas.html"><i class="fa-solid fa-percent"></i><span>Ofertas</span></a></li>
-                    <li><i class="fa-solid fa-lightbulb"></i><span>Iluminação</span></li>
-                    <li><i class="fa-solid fa-bolt"></i><span>Elétrica</span></li>
-                    <li><i class="fa-solid fa-trowel-bricks"></i><span>Argamassa</span></li>
-                    <li><i class="fa-solid fa-toilet"></i><span>Louças</span></li>
-                    <li><i class="fa-solid fa-ring"></i><span>Metais</span></li>
-                    <li><i class="fa-solid fa-faucet"></i><span>Hidráulica</span></li>
-                    <li><i class="fa-solid fa-tape"></i><span>Adesivos</span></li>
-                    <li><i class="fa-solid fa-hot-tub-person"></i><span>Aquecedores</span></li>
-                    <li><a href="suvinil-produtos.html"><i class="fa-solid fa-paint-roller"></i><span>Tintas</span></a></li>
-                    <li><i class="fa-solid fa-clone"></i><span>Pisos e Revestimentos</span></li>
-                    <li><i class="fa-solid fa-house"></i><span>Ambientes</span></li>
+                   <li><a href="ofertas.html"><i class="fa-solid fa-percent"></i><span>Ofertas</span></a></li>
+                   <li><i class="fa-solid fa-lightbulb"></i><span>Iluminação</span></li>
+                   <li><i class="fa-solid fa-bolt"></i><span>Elétrica</span></li>
+                   <li><i class="fa-solid fa-trowel-bricks"></i><span>Argamassa</span></li>
+                   <li><i class="fa-solid fa-toilet"></i><span>Louças</span></li>
+                   <li><i class="fa-solid fa-ring"></i><span>Metais</span></li>
+                   <li><i class="fa-solid fa-faucet"></i><span>Hidráulica</span></li>
+                   <li><i class="fa-solid fa-tape"></i><span>Adesivos</span></li>
+                   <li><i class="fa-solid fa-hot-tub-person"></i><span>Aquecedores</span></li>
+                   <li><a href="suvinil-produtos.html"><i class="fa-solid fa-paint-roller"></i><span>Tintas</span></a></li>
+                   <li><i class="fa-solid fa-clone"></i><span>Pisos e Revestimentos</span></li>
+                   <li><i class="fa-solid fa-house"></i><span>Ambientes</span></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="wrapper">
-        <section class="hero-banner">
-            <img src="banner-principal.jpg" alt="Promoção ColorShow Suvinil com várias latas de tinta em destaque.">
-        </section>
+    <main>
+        <div class="main-content-area wrapper">
+            
+            <aside class="sidebar-filters" id="sidebarFilters">
+                <button class="close-filters-button" id="closeFiltersBtn"><i class="fa-solid fa-times"></i></button>
+                <h2>Filtros</h2>
+                <div class="sidebar-filters-content-scroll"> 
+                    <div class="filter-group">
+                        <h3>Categorias <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <label><input type="checkbox" name="categoria" value="tintas"> Tintas</label>
+                            <label><input type="checkbox" name="categoria" value="pisos"> Pisos</label>
+                            <label><input type="checkbox" name="categoria" value="metais"> Metais</label>
+                            <label><input type="checkbox" name="categoria" value="iluminacao"> Iluminação</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Preço <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <input type="range" min="0" max="500" value="500" class="slider" id="priceRange">
+                            <p>Até R$ <span id="priceValue">500</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="apply-filters">Aplicar Filtros</button>
+            </aside>
 
-        <section class="info-bar">
-            <div class="wrapper">
-                <div class="info-item">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <span>Entregamos para todo o Brasil</span>
+            <section class="products-container">
+                <div class="page-title">
+                    <h1>Nossas Ofertas</h1>
+                    <p>Confira os produtos com preços especiais que separamos para você!</p>
                 </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <span>Parcelamos em até 10x sem juros</span>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-tags"></i>
-                    <span>Descontos especiais no boleto ou pix</span>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-medal"></i>
-                    <span>Mais de 80 anos de tradição</span>
-                </div>
-            </div>
-        </section>
 
-        <section class="product-carousel-section" id="promocoes">
-            <h2 class="section-title">Promoções</h2>
-            <div class="carousel-wrapper" id="promo-carousel-wrapper">
-                <div class="carousel-track" id="promo-carousel-track">
+                <button class="open-filters-button" id="openFiltersBtn"><i class="fa-solid fa-filter"></i> Filtros</button>
+
+                <div class="product-grid">
                     <div class="product-card common-card-styles">
                         <img src="https://politintas.vtexassets.com/arquivos/ids/170351/Tinta-Emborrachada-Fachada-Protegida-16-Litros-Suvinil.jpg?v=638621044287930000" alt="Tinta Suvinil Fachada Protegida">
                         <h3>Suvinil Fachada Protegida</h3>
@@ -291,213 +297,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-button prev" id="promo-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-button next" id="promo-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-            <div class="veja-mais-wrapper">
-                <a href="ofertas.html" class="veja-mais-button">Veja mais ofertas aqui</a>
-            </div>
-        </section>
-        
-        <section class="ambiente-section">
-            <h2 class="section-title">Navegue por Ambientes</h2>
-            <a href="#" class="ambiente-banner">
-                <img src="banheiro.jpg" alt="Ambiente de Banheiro Moderno">
-                <div class="ambiente-card-info">
-                    <h3>Banheiro</h3>
-                    <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-            <div class="carousel-wrapper" id="ambiente-carousel-wrapper">
-                <div class="carousel-track" id="ambiente-carousel-track">
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="cozinha.jpg" alt="Cozinha planejada com ilha">
-                        <div class="ambiente-card-info">
-                            <h3>Cozinha</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="quarto.jpg" alt="Quarto de casal com decoração minimalista">
-                        <div class="ambiente-card-info">
-                            <h3>Quarto</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="exterior.jpg" alt="Área externa com jardim e cadeiras">
-                        <div class="ambiente-card-info">
-                            <h3>Exterior</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="piscina.jpg" alt="Piscina com borda infinita">
-                        <div class="ambiente-card-info">
-                            <h3>Piscina</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="gourmet.jpg" alt="Área gourmet com churrasqueira">
-                        <div class="ambiente-card-info">
-                            <h3>Gourmet</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                </div>
-                <button class="carousel-button prev" id="ambiente-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-button next" id="ambiente-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </section>
-
-        <section class="product-carousel-section" id="mais-vendidos">
-            <h2 class="section-title">Os Mais Vendidos</h2>
-            <div class="carousel-wrapper" id="mais-vendidos-carousel-wrapper">
-                <div class="carousel-track" id="mais-vendidos-carousel-track">
-                    <div class="product-card common-card-styles">
-                        <img src="chuv1.jpg" alt="Chuveiro Acqua Storm Ultra">
-                        <h3>Chuveiro Lorenzetti Acqua Storm</h3>
-                        <p>Design moderno com jato intenso e confortável.</p>
-                        <span class="price">R$ 489,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="torn1.jpg" alt="Torneira Gourmet Extensível">
-                        <h3>Torneira Gourmet</h3>
-                        <p>Flexibilidade e elegância para sua cozinha.</p>
-                        <span class="price">R$ 399,00</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="piso1.jpg" alt="Piso Laminado Carvalho">
-                        <h3>Piso Laminado Carvalho</h3>
-                        <p>Resistente a riscos e fácil de limpar (Preço por m²).</p>
-                        <span class="price">R$ 79,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="fosc18l.jpg" alt="Tinta Suvinil Fosco Completo">
-                        <h3>Tinta Suvinil Fosco Completo 18L</h3>
-                        <p>Alta cobertura e rendimento para suas paredes.</p>
-                        <span class="price">R$ 319,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="piso2.jpg" alt="Porcelanato Acetinado Bege">
-                        <h3>Porcelanato Acetinado Bege</h3>
-                        <p>Acabamento sofisticado para áreas internas (Preço por m²).</p>
-                        <span class="price">R$ 89,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="torn2.jpg" alt="Torneira Monocomando Deca">
-                        <h3>Torneira Monocomando Bica Alta</h3>
-                        <p>Design minimalista e controle de temperatura.</p>
-                        <span class="price">R$ 549,00</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="adv.jpg" alt="Chuveiro Advanced Turbo">
-                        <h3>Chuveiro Lorenzetti Advanced</h3>
-                        <p>Mais pressão e volume de água para seu banho.</p>
-                        <span class="price">R$ 189,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="epoxi.jpg" alt="Tinta Epóxi Suvinil">
-                        <h3>Tinta Epóxi Suvinil Azulejos</h3>
-                        <p>Ideal para renovar azulejos e pisos.</p>
-                        <span class="price">R$ 159,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                     <div class="product-card common-card-styles">
-                        <img src="torn3.jpg" alt="Torneira Cascata de Vidro">
-                        <h3>Torneira Cascata de Vidro</h3>
-                        <p>Efeito cascata para um banheiro luxuoso.</p>
-                        <span class="price">R$ 279,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                     <div class="product-card common-card-styles">
-                        <img src="chuv2.jpg" alt="Ducha Top Jet Turbo">
-                        <h3>Ducha Top Jet Turbo Lorenzetti</h3>
-                        <p>Com pressurizador, ideal para locais com baixa pressão.</p>
-                        <span class="price">R$ 229,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-button prev" id="mais-vendidos-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-button next" id="mais-vendidos-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-            <div class="veja-mais-wrapper">
-                <a href="mais-vendidos.html" class="veja-mais-button">Veja mais</a>
-            </div>
-        </section>
-
-        <section class="product-categories">
-            <div class="category-card common-card-styles">
-                <img src="Acabamentos.jpg" alt="Showroom com diversos tipos de torneiras e acabamentos para banheiro.">
-                <div class="card-info">
-                    <h3>TORNEIRAS</h3>
-                    <p>Linha Premium</p>
-                </div>
-            </div>
-            <a href="suvinil-produtos.html" class="category-card common-card-styles">
-                <img src="Suvinil-Rezende.jpg" alt="Banner da promoção ColorShow Rezende e Suvinil.">
-                <div class="card-info">
-                    <h3>Suvinil</h3>
-                    <p>Cores e Acabamentos</p>
-                </div>
-            </a>
-            <div class="category-card common-card-styles">
-                <img src="Experiencias-magicas.jpg" alt="Campanha Experiências Mágicas 2025 Salvador com fitinhas do Bonfim ao fundo.">
-                <div class="card-info">
-                    <h3>Experiencias Magicas</h3>
-                    <p>Venha conhecer o nosso projeto</p>
-                </div>
-            </div>
-            <div class="category-card common-card-styles">
-                <img src="https://www.queveks.com.br/upload/ckeditor/images/Ambiente_todo_decorado.png" alt="Ambiente de sala de estar decorado para mostrar novidades em produtos.">
-                <div class="card-info">
-                    <h3>NOVIDADES</h3>
-                    <p>Últimos Lançamentos</p>
-                </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
     </main>
 
     <div class="filters-overlay" id="filtersOverlay"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

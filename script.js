@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('filtersOverlay');
     const body = document.body;
 
-    // --- FUNÇÕES GENÉRICAS PARA CONTROLAR MODAIS E MENUS LATERAIS ---
     function openModal(modalElement) {
         if (!modalElement) return;
         closeAllModals(); 
@@ -26,10 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.overflow = '';
     }
 
-
-    // --- EVENT LISTENERS (QUEM CHAMA AS FUNÇÕES) ---
-
-    // 1. Menu de Departamentos (Mobile)
     const departmentsButton = document.querySelector('.departments-button');
     const departmentsDropdown = document.getElementById('departmentsDropdown');
     const closeDepartmentsBtn = document.getElementById('closeDepartmentsBtn');
@@ -46,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
         closeDepartmentsBtn.addEventListener('click', closeAllModals);
     }
 
-    // 2. Sidebar de Filtros (Mobile)
     const openFiltersBtn = document.getElementById('openFiltersBtn');
     const sidebarFilters = document.getElementById('sidebarFilters');
     const closeFiltersBtn = document.getElementById('closeFiltersBtn');
@@ -58,12 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
         closeFiltersBtn.addEventListener('click', closeAllModals);
     }
     
-    // 3. Overlay
     if (overlay) {
         overlay.addEventListener('click', closeAllModals);
     }
-
-    // --- LÓGICAS ESPECÍFICAS DE COMPONENTES ---
 
     function setupDepartmentSubmenus() {
         const submenuParents = document.querySelectorAll('.departments-dropdown-content .has-submenu');
@@ -74,10 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (link && submenu) { 
                 link.addEventListener('click', function(event) {
-                    if (window.innerWidth <= 768) {
-                        event.preventDefault(); 
-                        submenu.classList.toggle('open');
-                        if (arrow) arrow.classList.toggle('rotate');
+                    const href = link.getAttribute('href');
+                    if (window.innerWidth <= 768 && (!href || href === '#')) {
+                         event.preventDefault(); 
+                         submenu.classList.toggle('open');
+                         if (arrow) arrow.classList.toggle('rotate');
                     }
                 });
             }
@@ -112,66 +104,65 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- LÓGICA ATUALIZADA PARA O CARROSSEL DE AMBIENTES (INFINITO) ---
-    function setupAmbienteCarousel() {
-        const track = document.getElementById('carouselTrack');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
+    function setupCarousel(wrapperId, trackId, prevBtnId, nextBtnId) {
+        const wrapper = document.getElementById(wrapperId);
+        if (!wrapper) return;
+
+        const track = document.getElementById(trackId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
         
-        if (!track || !prevBtn || !nextBtn) {
-            return;
-        }
+        if (!track || !prevBtn || !nextBtn) return;
 
         const cards = Array.from(track.children);
+        if (cards.length === 0) return;
+
         let currentIndex = 0;
         
         function updateCarousel() {
-            const cardWidth = cards[0].getBoundingClientRect().width;
-            const gap = 20;
-            const itemsToShow = window.innerWidth > 768 ? 2 : 1;
-            const totalItems = cards.length;
-            
+            const cardStyle = window.getComputedStyle(cards[0]);
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseFloat(cardStyle.marginRight) || 20;
             const moveDistance = cardWidth + gap;
+            
+            const trackWidth = wrapper.getBoundingClientRect().width;
+            let itemsToShow = Math.round(trackWidth / moveDistance);
+            if (itemsToShow < 1) itemsToShow = 1;
+
+            let maxIndex = cards.length - itemsToShow;
+            if (maxIndex < 0) maxIndex = 0;
+
+            if (currentIndex > maxIndex) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = maxIndex;
+            
             track.style.transform = `translateX(-${currentIndex * moveDistance}px)`;
         }
 
         nextBtn.addEventListener('click', () => {
-            const itemsToShow = window.innerWidth > 768 ? 2 : 1;
-            const maxIndex = cards.length - itemsToShow;
-
             currentIndex++;
-            if (currentIndex > maxIndex) {
-                currentIndex = 0; // Volta para o início
-            }
             updateCarousel();
         });
 
         prevBtn.addEventListener('click', () => {
-            const itemsToShow = window.innerWidth > 768 ? 2 : 1;
-            const maxIndex = cards.length - itemsToShow;
-
             currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = maxIndex; // Vai para o fim
-            }
             updateCarousel();
         });
         
-        // Recalcula a posição em caso de redimensionamento da janela
+        let resizeTimeout;
         window.addEventListener('resize', () => {
-            // Reseta para o começo para evitar quebras de layout
-            currentIndex = 0; 
-            updateCarousel();
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                currentIndex = 0; 
+                updateCarousel();
+            }, 200);
         });
 
-        // Chama a função uma vez para o posicionamento inicial
         updateCarousel();
     }
-
-
-    // --- INICIALIZAÇÃO DE TODAS AS FUNÇÕES ---
+    
     setupDepartmentSubmenus();
     setupFilterGroups();
-    setupAmbienteCarousel();
-
+    setupCarousel('promo-carousel-wrapper', 'promo-carousel-track', 'promo-prev-btn', 'promo-next-btn');
+    setupCarousel('ambiente-carousel-wrapper', 'ambiente-carousel-track', 'ambiente-prev-btn', 'ambiente-next-btn');
+    setupCarousel('mais-vendidos-carousel-wrapper', 'mais-vendidos-carousel-track', 'mais-vendidos-prev-btn', 'mais-vendidos-next-btn');
 });

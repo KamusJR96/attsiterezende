@@ -3,7 +3,7 @@
 
 /* Variáveis de Cores Globais */
 :root {
-    --cor-primaria: #ff8c00;
+    --cor-primaria: #f39c12; 
     --cor-secundaria: #28a745;
     --cor-fundo: #dcdcdc;
     --cor-texto: #333;
@@ -29,7 +29,10 @@ body {
     line-height: 1.6;
 }
 
-/* Ajuste para o header fixo em desktop */
+html {
+    scroll-behavior: smooth;
+}
+
 @media (min-width: 769px) {
     body {
         padding-top: 142px; 
@@ -76,7 +79,6 @@ a {
 .logo img {
     height: 40px;
     vertical-align: middle;
-    filter: brightness(0) invert(1);
 }
 
 .desktop-search, .desktop-actions {
@@ -335,7 +337,7 @@ main {
 }
 
 main.wrapper > * + * {
-    margin-top: 10px; /* <-- ALTERAÇÃO AQUI */
+    margin-top: 15px;
 }
 
 .hero-banner {
@@ -438,7 +440,7 @@ main.wrapper > * + * {
     color: #666;
 }
 
-/* Layout da Página de Produtos (suvinil-produtos.html) */
+/* Layout da Página de Produtos e Ofertas */
 .main-content-area {
     display: flex;
     gap: 25px;
@@ -470,14 +472,14 @@ main.wrapper > * + * {
 
 .product-card img {
     width: 100%;
-    height: 160px; /* <-- ALTERAÇÃO AQUI */
+    height: 160px;
     object-fit: contain;
 }
 
 .product-card h3 {
     font-size: 1em;
     margin: 15px 10px 10px 10px;
-    min-height: 36px; /* <-- ALTERAÇÃO AQUI */
+    min-height: 36px;
 }
 
 .product-card p {
@@ -498,7 +500,7 @@ main.wrapper > * + * {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 12px; /* <-- ALTERAÇÃO AQUI */
+    padding: 12px;
     background-color: #f8f8f8;
     border-top: 1px solid var(--cor-borda);
 }
@@ -602,7 +604,7 @@ main.wrapper > * + * {
 }
 
 .apply-filters:hover {
-    background-color: #e67e00;
+    background-color: #d35400; 
 }
 
 /* Botões e Overlay para Mobile */
@@ -627,17 +629,17 @@ main.wrapper > * + * {
     opacity: 1;
 }
 
+/* --- Seção de Título Genérica --- */
+.section-title {
+    text-align: left; /* <-- ALTERAÇÃO AQUI */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--cor-texto);
+}
 
 /* --- Seção de Ambientes (Home) --- */
 .ambiente-section {
-    margin-bottom: 10px;
-}
-.section-title {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: var(--cor-texto);
+    margin-bottom: 30px;
 }
 
 .ambiente-banner {
@@ -646,7 +648,7 @@ main.wrapper > * + * {
     overflow: hidden;
     display: block;
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 .ambiente-card {
@@ -703,22 +705,18 @@ main.wrapper > * + * {
     vertical-align: middle;
 }
 
-.ambiente-carousel-wrapper {
+/* --- Estilos Genéricos de Carrossel --- */
+.carousel-wrapper {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    margin-top: 10px;
 }
 
-.ambiente-carousel-track {
-    display: grid;
-    grid-template-columns: repeat(5, calc(50% - 10px)); 
+.carousel-track {
+    display: flex;
     gap: 20px;
+    padding: 10px 0;
     transition: transform 0.5s ease;
-}
-
-.ambiente-menor {
-    height: 240px; 
+    flex-wrap: nowrap;
 }
 
 .carousel-button {
@@ -741,24 +739,66 @@ main.wrapper > * + * {
 }
 
 .carousel-button.prev {
-    left: 10px;
+    left: -15px;
 }
 
 .carousel-button.next {
-    right: 10px;
+    right: -15px;
 }
 
+/* Carrossel de Ambientes (Específico) */
+#ambiente-carousel-wrapper {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#ambiente-carousel-track .ambiente-card {
+    flex-shrink: 0;
+    height: 240px; 
+    width: calc(50% - 10px);
+}
+
+/* Carrossel de Produtos e Mais Vendidos (Específico) */
+.product-carousel-section .section-title {
+    margin-bottom: 10px;
+}
+
+.product-carousel-section .carousel-track .product-card {
+    flex-shrink: 0;
+    width: calc(25% - 15px);
+}
+
+.veja-mais-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.veja-mais-button {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.veja-mais-button:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+}
 
 /* --- Media Queries para Responsividade --- */
-
-/* Laptops menores */
 @media (max-width: 1200px) {
     .product-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+    .product-carousel-section .carousel-track .product-card {
+        width: calc(33.33% - 14px);
+    }
 }
 
-/* Tablet */
 @media (max-width: 991px) {
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -766,13 +806,13 @@ main.wrapper > * + * {
     .ambiente-banner {
         height: 300px;
     }
-    .sidebar-filters {
-        position: static;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .main-content-area {
+    .sidebar-filters, .main-content-area {
         flex-direction: column;
+        width: 100%;
+    }
+     .sidebar-filters {
+        position: static;
+        margin-bottom: 20px;
     }
     .info-bar .wrapper {
         justify-content: flex-start; 
@@ -784,7 +824,6 @@ main.wrapper > * + * {
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .wrapper {
         padding: 0 10px;
@@ -815,7 +854,6 @@ main.wrapper > * + * {
         margin: 0 10px;
     }
 
-    /* Estilos para Menus Mobile (Departamento e Filtros) */
     .departments-dropdown-content, .sidebar-filters {
         position: fixed;
         top: 0;
@@ -935,13 +973,12 @@ main.wrapper > * + * {
         font-size: 13px;
     }
     
-    .ambiente-carousel-track {
-        grid-template-columns: repeat(5, calc(100% - 10px));
-        gap: 20px;
+    #ambiente-carousel-track .ambiente-card {
+        width: 80%;
     }
-
-    .ambiente-menor {
-        height: 200px;
+    
+    .product-carousel-section .carousel-track .product-card {
+        width: calc(50% - 10px);
     }
 
     .section-title {
@@ -951,10 +988,24 @@ main.wrapper > * + * {
     .ambiente-card-info h3 {
         font-size: 18px;
     }
+
+    .carousel-button.prev {
+        left: 5px;
+    }
+
+    .carousel-button.next {
+        right: 5px;
+    }
 }
 
 @media (max-width: 520px) {
     .info-item {
         flex-basis: 100%;
+    }
+    .product-carousel-section .carousel-track .product-card {
+        width: 80%;
+    }
+    #ambiente-carousel-track .ambiente-card {
+        width: 80%;
     }
 }

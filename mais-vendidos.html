@@ -180,181 +180,42 @@
         </nav>
     </header>
 
-    <main class="wrapper">
-        <section class="hero-banner">
-            <img src="banner-principal.jpg" alt="Promoção ColorShow Suvinil com várias latas de tinta em destaque.">
-        </section>
+    <main>
+        <div class="main-content-area wrapper">
+            
+            <aside class="sidebar-filters" id="sidebarFilters">
+                <button class="close-filters-button" id="closeFiltersBtn"><i class="fa-solid fa-times"></i></button>
+                <h2>Filtros</h2>
+                <div class="sidebar-filters-content-scroll"> 
+                    <div class="filter-group">
+                        <h3>Categorias <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <label><input type="checkbox" name="categoria" value="tintas"> Tintas</label>
+                            <label><input type="checkbox" name="categoria" value="pisos"> Pisos</label>
+                            <label><input type="checkbox" name="categoria" value="metais"> Metais</label>
+                            <label><input type="checkbox" name="categoria" value="chuveiros"> Chuveiros</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Preço <i class="fa-solid fa-chevron-down"></i></h3>
+                        <div class="filter-content">
+                            <input type="range" min="0" max="1000" value="1000" class="slider" id="priceRange">
+                            <p>Até R$ <span id="priceValue">1000</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="apply-filters">Aplicar Filtros</button>
+            </aside>
 
-        <section class="info-bar">
-            <div class="wrapper">
-                <div class="info-item">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <span>Entregamos para todo o Brasil</span>
+            <section class="products-container">
+                <div class="page-title">
+                    <h1>Os Mais Vendidos</h1>
+                    <p>Confira os produtos preferidos dos nossos clientes!</p>
                 </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <span>Parcelamos em até 10x sem juros</span>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-tags"></i>
-                    <span>Descontos especiais no boleto ou pix</span>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-medal"></i>
-                    <span>Mais de 80 anos de tradição</span>
-                </div>
-            </div>
-        </section>
 
-        <section class="product-carousel-section" id="promocoes">
-            <h2 class="section-title">Promoções</h2>
-            <div class="carousel-wrapper" id="promo-carousel-wrapper">
-                <div class="carousel-track" id="promo-carousel-track">
-                    <div class="product-card common-card-styles">
-                        <img src="https://politintas.vtexassets.com/arquivos/ids/170351/Tinta-Emborrachada-Fachada-Protegida-16-Litros-Suvinil.jpg?v=638621044287930000" alt="Tinta Suvinil Fachada Protegida">
-                        <h3>Suvinil Fachada Protegida</h3>
-                        <p>Tinta emborrachada ideal para fachadas.</p>
-                        <span class="price">R$ 499,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="https://img.irroba.com.br/filters:fill(fff):quality(80)/fitztint/catalog/1714n.jpg" alt="Tinta Suvinil Fosco Completo">
-                        <h3>Suvinil Fosco Completo</h3>
-                        <p>Alta cobertura para paredes internas e externas.</p>
-                        <span class="price">R$ 299,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="https://panoramahomecenter.vtexassets.com/arquivos/ids/5683198/Suviflex_36_lt_suvinil_ref50687488_1917530.jpg?v=638811013794800000" alt="Suvinil Suviflex">
-                        <h3>Suvinil Suviflex</h3>
-                        <p>Manta líquida que impermeabiliza paredes.</p>
-                        <span class="price">R$ 450,00</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="https://politintas.vtexassets.com/arquivos/ids/170125/tinta-acrilica-inova-fosco-sempe-limpo-18l-suvinil.png?v=638718651140400000" alt="Tinta Suvinil Sempre Limpa">
-                        <h3>Suvinil Sempre Limpa</h3>
-                        <p>Tecnologia que facilita a limpeza de paredes.</p>
-                        <span class="price">R$ 349,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="https://cdn.leroymerlin.com.br/products/tinta_suvinil_toque_fosco_select_18litros_gelo_1572216695_5db2_600x600.jpg" alt="Tinta Suvinil Fosco Select">
-                        <h3>Suvinil Fosco Select</h3>
-                        <p>Acabamento fosco aveludado e sofisticado.</p>
-                        <span class="price">R$ 389,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="https://todimo.vtexassets.com/arquivos/ids/208258-800-800?v=638597579289270000&width=800&height=800&aspect=true" alt="Esmalte Suvinil Cor & Proteção">
-                        <h3>Esmalte Cor & Proteção</h3>
-                        <p>Esmalte base água para madeira e metal.</p>
-                        <span class="price">R$ 129,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                        <img src="https://img.irroba.com.br/filters:fill(fff):quality(80)/fitztint/catalog/1714n.jpg" alt="Tinta Suvinil Fosco Completo">
-                        <h3>Suvinil Fosco Completo</h3>
-                        <p>Alta cobertura para paredes internas e externas.</p>
-                        <span class="price">R$ 299,90</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="product-card common-card-styles">
-                         <img src="https://panoramahomecenter.vtexassets.com/arquivos/ids/5683198/Suviflex_36_lt_suvinil_ref50687488_1917530.jpg?v=638811013794800000" alt="Suvinil Suviflex">
-                        <h3>Suvinil Suviflex</h3>
-                        <p>Manta líquida que impermeabiliza paredes.</p>
-                        <span class="price">R$ 450,00</span>
-                        <div class="product-buttons">
-                            <button class="add-to-cart">Adicionar ao carrinho</button>
-                            <button class="buy-now">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-button prev" id="promo-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-button next" id="promo-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-            <div class="veja-mais-wrapper">
-                <a href="ofertas.html" class="veja-mais-button">Veja mais ofertas aqui</a>
-            </div>
-        </section>
-        
-        <section class="ambiente-section">
-            <h2 class="section-title">Navegue por Ambientes</h2>
-            <a href="#" class="ambiente-banner">
-                <img src="banheiro.jpg" alt="Ambiente de Banheiro Moderno">
-                <div class="ambiente-card-info">
-                    <h3>Banheiro</h3>
-                    <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-            <div class="carousel-wrapper" id="ambiente-carousel-wrapper">
-                <div class="carousel-track" id="ambiente-carousel-track">
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="cozinha.jpg" alt="Cozinha planejada com ilha">
-                        <div class="ambiente-card-info">
-                            <h3>Cozinha</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="quarto.jpg" alt="Quarto de casal com decoração minimalista">
-                        <div class="ambiente-card-info">
-                            <h3>Quarto</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="exterior.jpg" alt="Área externa com jardim e cadeiras">
-                        <div class="ambiente-card-info">
-                            <h3>Exterior</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="piscina.jpg" alt="Piscina com borda infinita">
-                        <div class="ambiente-card-info">
-                            <h3>Piscina</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="#" class="ambiente-card ambiente-menor">
-                        <img src="gourmet.jpg" alt="Área gourmet com churrasqueira">
-                        <div class="ambiente-card-info">
-                            <h3>Gourmet</h3>
-                            <span>Veja mais <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                </div>
-                <button class="carousel-button prev" id="ambiente-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-button next" id="ambiente-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </section>
+                <button class="open-filters-button" id="openFiltersBtn"><i class="fa-solid fa-filter"></i> Filtros</button>
 
-        <section class="product-carousel-section" id="mais-vendidos">
-            <h2 class="section-title">Os Mais Vendidos</h2>
-            <div class="carousel-wrapper" id="mais-vendidos-carousel-wrapper">
-                <div class="carousel-track" id="mais-vendidos-carousel-track">
+                <div class="product-grid">
                     <div class="product-card common-card-styles">
                         <img src="chuv1.jpg" alt="Chuveiro Acqua Storm Ultra">
                         <h3>Chuveiro Lorenzetti Acqua Storm</h3>
@@ -456,45 +317,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-button prev" id="mais-vendidos-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-button next" id="mais-vendidos-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-            <div class="veja-mais-wrapper">
-                <a href="mais-vendidos.html" class="veja-mais-button">Veja mais</a>
-            </div>
-        </section>
-
-        <section class="product-categories">
-            <div class="category-card common-card-styles">
-                <img src="Acabamentos.jpg" alt="Showroom com diversos tipos de torneiras e acabamentos para banheiro.">
-                <div class="card-info">
-                    <h3>TORNEIRAS</h3>
-                    <p>Linha Premium</p>
-                </div>
-            </div>
-            <a href="suvinil-produtos.html" class="category-card common-card-styles">
-                <img src="Suvinil-Rezende.jpg" alt="Banner da promoção ColorShow Rezende e Suvinil.">
-                <div class="card-info">
-                    <h3>Suvinil</h3>
-                    <p>Cores e Acabamentos</p>
-                </div>
-            </a>
-            <div class="category-card common-card-styles">
-                <img src="Experiencias-magicas.jpg" alt="Campanha Experiências Mágicas 2025 Salvador com fitinhas do Bonfim ao fundo.">
-                <div class="card-info">
-                    <h3>Experiencias Magicas</h3>
-                    <p>Venha conhecer o nosso projeto</p>
-                </div>
-            </div>
-            <div class="category-card common-card-styles">
-                <img src="https://www.queveks.com.br/upload/ckeditor/images/Ambiente_todo_decorado.png" alt="Ambiente de sala de estar decorado para mostrar novidades em produtos.">
-                <div class="card-info">
-                    <h3>NOVIDADES</h3>
-                    <p>Últimos Lançamentos</p>
-                </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
     </main>
 
     <div class="filters-overlay" id="filtersOverlay"></div>
